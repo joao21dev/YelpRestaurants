@@ -1,0 +1,24 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-danger" style="opacity: 0.9;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">YelpRestaurant</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Início</a>
+                <a class="nav-link" href="/restaurantes">Restaurantes</a>
+                <a class="nav-link" href="/restaurantes/new">Novo Restaurante</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <% if(!currentUser) {%>
+                <a class="nav-link" href="/login">Entrar</a>
+                <a class="nav-link" href="/register">Cadastre-se</a>
+                <% } else {%>
+                <a class="nav-link" href="/logout">Sair</a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</nav>
